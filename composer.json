@@ -12,8 +12,9 @@
     "license": "MIT",
     "require": {
         "laravel/framework": "4.0.*",
-	"patricktalmadge/bootstrapper": "dev-develop",
-	"patrick-rose/laravel-shared-host": "dev-master"	
+	"patrick-rose/laravel-shared-host": "dev-master",
+	"way/generators": "1.0.*@dev",
+	"nesbot/carbon": "dev-master"
     },
     "autoload": {
         "classmap": [
