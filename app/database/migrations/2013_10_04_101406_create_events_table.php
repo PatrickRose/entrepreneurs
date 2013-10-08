@@ -5,33 +5,32 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateEventsTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('events', function(Blueprint $table) {
-			$table->increments('id');
-			$table->string('title');
-			$table->text('description');
-			$table->integer('day');
-			$table->integer('month');
-			$table->integer('year');
-			$table->timestamps();
-		});
-	}
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('events', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->text('description');
+            $table->date('startDate');
+            $table->time('startTime');
+            $table->timestamps();
+        });
+    }
 
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('events');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('events');
+    }
 
 }

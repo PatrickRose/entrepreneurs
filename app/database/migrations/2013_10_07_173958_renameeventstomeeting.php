@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateUsersTable extends Migration {
+class RenameEventsToMeeting extends Migration {
 
     /**
      * Run the migrations.
@@ -12,12 +12,7 @@ class CreateUsersTable extends Migration {
      */
     public function up()
     {
-        Schema::create('users', function(Blueprint $table) {
-            $table->increments('id');
-            $table->string('username');
-            $table->string('password');
-            $table->timestamps();
-        });
+        Schema::rename('events', 'meetings');
     }
 
 
@@ -28,7 +23,7 @@ class CreateUsersTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::rename('meetings', 'events');
     }
 
 }

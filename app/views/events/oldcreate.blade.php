@@ -1,19 +1,13 @@
 @extends('layouts.base')
 
 @section('main')
-
     @if ($errors->any())
         <ul>
             {{ implode('', $errors->all('<li class="error">:message</li>')) }}
         </ul>
     @endif
 
-    <h1>Edit Event</h1>
-
-    
-
-    {{ Form::model($event, array('method' => 'PATCH', 'route' => array('events.update', $event->id))) }}
-
+    {{ Form::open(array('route' => 'events.store')) }}
     <ul>
         <li>
             {{ Form::label('title', 'Title:') }}
@@ -41,8 +35,7 @@
         </li>
 
         <li>
-            {{ Form::submit('Update', array('class' => 'btn btn-info')) }}
-            {{ link_to_route('events.show', 'Cancel', $event->id, array('class' => 'btn')) }}
+            {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
         </li>
     </ul>
     {{ Form::close() }}

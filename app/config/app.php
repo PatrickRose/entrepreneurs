@@ -113,7 +113,10 @@ return array(
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Way\Generators\GeneratorsServiceProvider'
+        'Way\Generators\GeneratorsServiceProvider',
+        'Former\FormerServiceProvider',
+	'Bootstrapper\BootstrapperServiceProvider',
+	'Basset\BassetServiceProvider'
     ),
 
     /*
@@ -146,6 +149,7 @@ return array(
         'Artisan'         => 'Illuminate\Support\Facades\Artisan',
         'Auth'            => 'Illuminate\Support\Facades\Auth',
         'Blade'           => 'Illuminate\Support\Facades\Blade',
+	'Basset'          => 'Basset\Facade',
         'Cache'           => 'Illuminate\Support\Facades\Cache',
         'ClassLoader'     => 'Illuminate\Support\ClassLoader',
         'Config'          => 'Illuminate\Support\Facades\Config',
@@ -157,6 +161,7 @@ return array(
         'Event'           => 'Illuminate\Support\Facades\Event',
         'File'            => 'Illuminate\Support\Facades\File',
         'Form'            => 'Illuminate\Support\Facades\Form',
+        'Former'          => 'Former\Facades\Former',
         'Hash'            => 'Illuminate\Support\Facades\Hash',
         'HTML'            => 'Illuminate\Support\Facades\HTML',
         'Input'           => 'Illuminate\Support\Facades\Input',
@@ -178,6 +183,30 @@ return array(
         'URL'             => 'Illuminate\Support\Facades\URL',
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
+        'Alert'          => 'Bootstrapper\\Alert',
+        'Badge'          => 'Bootstrapper\\Badge',
+        'Breadcrumb'     => 'Bootstrapper\\Breadcrumb',
+        'Button'         => 'Bootstrapper\\Button',
+        'ButtonGroup'    => 'Bootstrapper\\ButtonGroup',
+        'ButtonToolbar'  => 'Bootstrapper\\ButtonToolbar',
+        'Carousel'       => 'Bootstrapper\\Carousel',
+        'DropdownButton' => 'Bootstrapper\\DropdownButton',
+        'Form'           => 'Bootstrapper\\Form',
+        'Helpers'        => 'Bootstrapper\\Helpers',
+        'Icon'           => 'Bootstrapper\\Icon',
+        'Image'          => 'Bootstrapper\\Image',
+        'Label'          => 'Bootstrapper\\Label',
+        'MediaObject'    => 'Bootstrapper\\MediaObject',
+        'Navbar'         => 'Bootstrapper\\Navbar',
+        'Navigation'     => 'Bootstrapper\\Navigation',
+        'Paginator'      => 'Bootstrapper\\Paginator',
+        'Progress'       => 'Bootstrapper\\Progress',
+        'Tabbable'       => 'Bootstrapper\\Tabbable',
+        'Table'          => 'Bootstrapper\\Table',
+        'Thumbnail'      => 'Bootstrapper\\Thumbnail',
+        'Typeahead'      => 'Bootstrapper\\Typeahead',
+        'Typography'     => 'Bootstrapper\\Typography',
+
 
     ),
 

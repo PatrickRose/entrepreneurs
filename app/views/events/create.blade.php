@@ -1,47 +1,27 @@
 @extends('layouts.base')
 
-@section('main')
+@section('title')
+    Create New Event
+@stop
+
+@section('body')
 
     <h1>Create Event</h1>
 
-    @if ($errors->any())
-        <ul>
-            {{ implode('', $errors->all('<li class="error">:message</li>')) }}
-        </ul>
-    @endif
-    
-    {{ Form::open(array('route' => 'events.store')) }}
-    <ul>
-        <li>
-            {{ Form::label('title', 'Title:') }}
-            {{ Form::text('title') }}
-        </li>
+    {{ Former::open()->method('POST')->rules(array('name' => 'required')) }}
 
-        <li>
-            {{ Form::label('description', 'Description:') }}
-            {{ Form::textarea('description') }}
-        </li>
+    <p>{{ Former::text('title')->required() }}</p>
 
-        <li>
-            {{ Form::label('day', 'Day:') }}
-            {{ Form::input('number', 'day') }}
-        </li>
+    <p>{{ Former::textarea('description') }}</p>
 
-        <li>
-            {{ Form::label('month', 'Month:') }}
-            {{ Form::input('number', 'month') }}
-        </li>
+    <p>{{ Former::date('startDate')->id('datepicker') }}</p>
 
-        <li>
-            {{ Form::label('year', 'Year:') }}
-            {{ Form::input('number', 'year') }}
-        </li>
+    {{ Former::close() }}
 
-        <li>
-            {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
-        </li>
-    </ul>
-    {{ Form::close() }}
-
+    <script>
+     $(function() {
+         $('.form-horizontal.control-group.controls#datepicker').datepicker()
+     });
+    </script>
 
 @stop
