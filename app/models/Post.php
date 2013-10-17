@@ -1,6 +1,6 @@
-<?php
+<?php namespace ShefEnt;
 
-class Post extends Eloquent {
+class Post extends \Eloquent {
     protected $guarded = array();
 
     public static $rules = array(

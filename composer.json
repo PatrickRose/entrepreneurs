@@ -6,7 +6,6 @@
             "email": "pjr0911025@gmail.com"
         }
     ],
-
     "description": "Site for the Sheffield Entrepreneurs society.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
