@@ -114,9 +114,6 @@ return array(
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
-        'Former\FormerServiceProvider',
-	'Bootstrapper\BootstrapperServiceProvider',
-	'Basset\BassetServiceProvider'
     ),
 
     /*
@@ -183,31 +180,6 @@ return array(
         'URL'             => 'Illuminate\Support\Facades\URL',
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
-        'Alert'          => 'Bootstrapper\\Alert',
-        'Badge'          => 'Bootstrapper\\Badge',
-        'Breadcrumb'     => 'Bootstrapper\\Breadcrumb',
-        'Button'         => 'Bootstrapper\\Button',
-        'ButtonGroup'    => 'Bootstrapper\\ButtonGroup',
-        'ButtonToolbar'  => 'Bootstrapper\\ButtonToolbar',
-        'Carousel'       => 'Bootstrapper\\Carousel',
-        'DropdownButton' => 'Bootstrapper\\DropdownButton',
-        'Form'           => 'Bootstrapper\\Form',
-        'Helpers'        => 'Bootstrapper\\Helpers',
-        'Icon'           => 'Bootstrapper\\Icon',
-        'Image'          => 'Bootstrapper\\Image',
-        'Label'          => 'Bootstrapper\\Label',
-        'MediaObject'    => 'Bootstrapper\\MediaObject',
-        'Navbar'         => 'Bootstrapper\\Navbar',
-        'Navigation'     => 'Bootstrapper\\Navigation',
-        'Paginator'      => 'Bootstrapper\\Paginator',
-        'Progress'       => 'Bootstrapper\\Progress',
-        'Tabbable'       => 'Bootstrapper\\Tabbable',
-        'Table'          => 'Bootstrapper\\Table',
-        'Thumbnail'      => 'Bootstrapper\\Thumbnail',
-        'Typeahead'      => 'Bootstrapper\\Typeahead',
-        'Typography'     => 'Bootstrapper\\Typography',
-
-
     ),
 
 );

@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- Stuff will go here  -->
         <title>@yield('title') - Sheffield Entrepreneurs</title>
-        {{ Basset::show('bootstrapper.css') }}
         <meta name="description" content="">
         {{ HTML::style('css/main.css') }}
         <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
@@ -55,7 +54,5 @@
                 </div>
             </div>
         </footer>
-        {{ Basset::show('bootstrapper.js') }}
-        {{ HTML::script('js/datepicker.js') }}
     </body>
 </html>

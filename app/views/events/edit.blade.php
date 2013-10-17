@@ -1,6 +1,10 @@
 @extends('layouts.base')
 
-@section('main')
+@section('title')
+    Edit Event
+@stop
+
+@section('body')
 
     @if ($errors->any())
         <ul>

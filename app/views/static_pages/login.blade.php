@@ -1,18 +1,27 @@
 @extends('layouts.base')
 
+@section('title')
+Admin Log In
+@stop
+
 @section('body')
 
-    {{ Former::open()->method('POST')
-      ->rules(array('username' => 'required',
-		    'password' => 'required'
-		    )) }}
+    {{ Form::open(array('url' => route('login'))) }}
 
-    <p>{{ Former::text('username')->required() }}</p>
+    <!-- username field -->
+    <p>
+        {{ Form::label('username', 'Username') }}<br/>
+        {{ Form::text('username', Input::old('username')) }}
+    </p>
 
-    <p>{{ Former::password('password')->required() }}</p>
+    <!-- password field -->
+    <p>
+        {{ Form::label('password', 'Password') }}<br/>
+        {{ Form::password('password') }}
+    </p>
 
-    <p>{{ Former::submit()->class('btn btn-primary') }}</p>
+    <!-- submit button -->
+    <p>{{ Form::submit('Login') }}</p>
 
-    {{ Former::close() }}
-
+    {{ Form::close() }}
 @stop

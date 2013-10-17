@@ -47,6 +47,11 @@ class StaticPagesController extends BaseController
 
     public function membership()
     {
-        return View::make('membership');
+        return View::make('static_pages.membership');
+    }
+
+    public function contact()
+    {
+        return View::make('static_pages.contact');
     }
 }
