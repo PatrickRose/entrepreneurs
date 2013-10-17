@@ -9,7 +9,7 @@ class MeetingsController extends BaseController {
      */
     protected $event;
 
-    public function __construct(Event $event)
+    public function __construct(Meeting $event)
     {
         $this->event = $event;
     }
@@ -44,7 +44,7 @@ class MeetingsController extends BaseController {
     public function store()
     {
         $input = Input::all();
-        $validation = Validator::make($input, Event::$rules);
+        $validation = Validator::make($input, $this->event->fix_rules());
 
         if ($validation->passes())
             {
