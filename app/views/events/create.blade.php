@@ -8,20 +8,19 @@
 
     <h1>Create Event</h1>
 
-    {{ Former::open()->method('POST')->rules(array('name' => 'required')) }}
+    {{ Form::open(array('route' => 'events.store')) }}
+    <p>{{ Form::text('title') }}</p>
 
-    <p>{{ Former::text('title')->required() }}</p>
+    <p>{{ Form::textarea('description') }}</p>
 
-    <p>{{ Former::textarea('description') }}</p>
+    <p>{{ Form::date('startDate') }}</p>
 
-    <p>{{ Former::date('startDate')->id('datepicker') }}</p>
+    <p>{{ Form::time('startTime') }}</p>
 
-    {{ Former::close() }}
+    <p>{{ Form::text('location') }}</p>
 
-    <script>
-     $(function() {
-         $('.form-horizontal.control-group.controls#datepicker').datepicker()
-     });
-    </script>
+    <p>{{ Form::submit('Submit', array('class' => 'btn btn-info')) }}</p>
+
+    {{ Form::close() }}
 
 @stop

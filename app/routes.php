@@ -18,29 +18,9 @@ Route::get('/',
            );
 
 
-Route::resource('meetings', 'MeetingsController');
-
+Route::resource('events', 'MeetingsController');
 
 Route::resource('posts', 'PostsController');
-
-
-Route::get('about',
-           array('as' => 'about',
-                 'uses' => 'StaticPagesController@about'
-                 )
-           );
-
-Route::get('join',
-           array('as' => 'join',
-                 'uses' => 'StaticPagesController@join'
-                 )
-           );
-
-Route::get('contact',
-           array('as' => 'contact',
-                 'uses' => 'StaticPagesController@contact'
-                 )
-           );
 
 Route::get('login',
            array('as' => 'loginPage',
@@ -59,3 +39,21 @@ Route::get('admin',
                  'uses' => 'StaticPagesController@admin'
                  )
            )->before('auth');
+
+Route::get('about',
+	   array('as' => 'about',
+		 'uses' => 'StaticPagesController@about'
+		 )
+	   );
+
+Route::get('membership',
+	   array('as' => 'membership',
+		 'uses' => 'StaticPagesController@membership'
+		 )
+	   );
+
+Route::get('contact',
+	   array('as' => 'contact',
+		 'uses' => 'StaticPagesController@contact'
+		 )
+	   );
