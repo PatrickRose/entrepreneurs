@@ -3,16 +3,24 @@
         <div id="social-media">
             <ul>
                 <li>
-                    <a id="fb"><img src="{{ asset('img/facebook-f.png') }}" height="28" alt="facebook logo" /></a>
+                    <a id="fb" href='https://www.facebook.com/SheffieldEntrepreneurs'>
+			<img src="{{ asset('img/facebook-f.png') }}" height="28" alt="facebook logo" />
+		    </a>
                 </li>
                 <li>
-                    <a id="tw"><img src="{{ asset('img/twitter-bird.png') }}" height="23" alt="twitter logo" /></a>
+                    <a id="tw" href='https://twitter.com/_SEntrepreneurs'>
+			<img src="{{ asset('img/twitter-bird.png') }}" height="23" alt="twitter logo" />
+		    </a>
                 </li>
                 <li>
-                    <a id="li"><img src="{{ asset('img/linkedin-in.png')}}" height="28" alt="linkedin logo" /></a>
+                    <a id="li" href='http://www.linkedin.com/company/sheffield-entrepreneurs'>
+			<img src="{{ asset('img/linkedin-in.png')}}" height="28" alt="linkedin logo" />
+		    </a>
                 </li>
                 <li>
-                    <a id="ema"><img src="{{ asset('img/email.png') }}" height ="20" alt="email icon" /></a>
+                    <a id="ema" href='mailto:team@shefentrepreneurs.com'>
+			<img src="{{ asset('img/email.png') }}" height ="20" alt="email icon" />
+		    </a>
                 </li>
             </ul>
         </div>
