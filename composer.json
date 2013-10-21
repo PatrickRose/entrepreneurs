@@ -13,7 +13,8 @@
         "laravel/framework": "4.0.x-dev",
 	"patrick-rose/laravel-shared-host": "dev-master",
 	"way/generators": "1.0.*@dev",
-	"nesbot/carbon": "1.4.0"
+	"nesbot/carbon": "1.4.0",
+	"thujohn/twitter": "dev-master"
     },
     "autoload": {
         "classmap": [
