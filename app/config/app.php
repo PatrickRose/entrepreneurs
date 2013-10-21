@@ -114,7 +114,8 @@ return array(
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
-	'PatrickRose\LaravelSharedHost\LaravelSharedHostServiceProvider'
+        'PatrickRose\LaravelSharedHost\LaravelSharedHostServiceProvider',
+        'Thujohn\Twitter\TwitterServiceProvider',
     ),
 
     /*
@@ -147,7 +148,6 @@ return array(
         'Artisan'         => 'Illuminate\Support\Facades\Artisan',
         'Auth'            => 'Illuminate\Support\Facades\Auth',
         'Blade'           => 'Illuminate\Support\Facades\Blade',
-	'Basset'          => 'Basset\Facade',
         'Cache'           => 'Illuminate\Support\Facades\Cache',
         'ClassLoader'     => 'Illuminate\Support\ClassLoader',
         'Config'          => 'Illuminate\Support\Facades\Config',
@@ -181,6 +181,7 @@ return array(
         'URL'             => 'Illuminate\Support\Facades\URL',
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
+        'Twitter'         => 'Thujohn\Twitter\TwitterFacade',
     ),
 
 );

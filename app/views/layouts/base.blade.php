@@ -11,48 +11,49 @@
     </head>
     <body>
         @include('layouts.navigation')
-        <div id="content" class="st-width">
-            @if (Session::has('flash_error'))
-                {{ Alert::danger("<h4 class='alert-heading'>Oh noes!</h4>" .Session::get('flash_error'))->block() }}
-            @endif
+        <div id="content-container">
+            <div id="content" class="st-width">
+                @if (Session::has('flash_error'))
+                    {{ Alert::danger("<h4 class='alert-heading'>Oh noes!</h4>" .Session::get('flash_error'))->block() }}
+                @endif
 
-            @if (Session::has('flash_notice'))
-                {{ Alert::info(Session::get('flash_notice'))->block() }}
-            @endif
-            <!-- Wait for more design stuff -->
-            @yield('body')
-        </div>
-        <footer>
-            <div id='dem-tweets'>
-                Tweets
+                @if (Session::has('flash_notice'))
+                    {{ Alert::info(Session::get('flash_notice'))->block() }}
+                @endif
+                <!-- Wait for more design stuff -->
+                @yield('body')
             </div>
-            <div id="partners">
-            </div>
-            <div id="clear" style="clear:both;"></div>
-            <div id="cheating-footer">
-                <div id="cheating-subfooter" class="st-width">
-                    <div id="footer-foot">
-                        <p class="left-float">
-                            Sheffield Entrepreneurs, Copyright 2012-2013
-                        </p>
-                        <p class="right-float">
-                            <a>Site Map</a>
-                            |
-                            <a>Cookie Policy</a>
-                            |
-                            <a>Jobs</a>
-                            |
-                            <a>Contact us</a>
-                            |
-                            @if(Auth::check())
-                                {{ link_to_route('admin', 'Admin Page') }}
-                            @else
-                                {{ link_to_route('loginPage', "Admin Login") }}
-                            @endif
-                        </p>
+            <footer>
+                <div id="footer-cont" class="st-width">
+                        @include('layouts.twitter')
+                <div id="partners">
+                    <h4>Partners &amp; Sponsors</h4>
+                    <div id="left-col">
+                        <a href="http://nacue.com/"><img src="img/nacue-logo.png" alt="Our Sponsor Nacue's logo" /></a>
+                    </div>
+                    <div id="right-col">
+                        <a href="http://www.shef.ac.uk/union/"><img src="img/sulogo.png" height="78" alt="Sheffield SU logo" /></a>
                     </div>
                 </div>
+        </div>
+        <div id="clear" style="clear:both;"></div>
+        <div id="cheating-footer">
+            <div id="cheating-subfooter" class="st-width">
+                <div id="footer-foot">
+                    <p class="left-float">
+                        Sheffield Entrepreneurs, Copyright 2012-2013
+                    </p>
+                    <p class="right-float">
+                        {{ link_to_route('contact', 'Contact Us') }}
+                        |
+                        @if(Auth::check())
+                            {{ link_to_route('admin', 'Admin Page') }}
+                        @else
+                            {{ link_to_route('loginPage', "Admin Login") }}
+                        @endif
+
+                </div>
             </div>
-        </footer>
+            </footer>
     </body>
 </html>
