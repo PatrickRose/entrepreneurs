@@ -24,7 +24,7 @@ class StaticPagesController extends BaseController
             );
 
             if (Auth::attempt($user)) {
-                return Redirect::route('home');
+                return Redirect::intended('/');
             }
 
             // authentication failure! lets go back to the login page
@@ -33,6 +33,11 @@ class StaticPagesController extends BaseController
         return Redirect::route('home');
 
         //
+    }
+
+    public function logout() {
+        Auth::logout();
+        return Redirect::route('home');
     }
 
     public function admin()

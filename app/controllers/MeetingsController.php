@@ -33,7 +33,10 @@ class MeetingsController extends BaseController {
      */
     public function create()
     {
-        return View::make('events.create');
+        if(Auth::check()) {
+            return View::make('events.create');
+        }
+        return Redirect::route('loginPage');
     }
 
     /**

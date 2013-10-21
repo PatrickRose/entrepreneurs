@@ -17,6 +17,11 @@ Route::get('/',
                  )
            );
 
+Route::get('logout',
+           array('as' => 'logout',
+                 'uses' => 'StaticPagesController@logout'
+                 )
+           )->before('auth');
 
 Route::resource('events', 'MeetingsController');
 
